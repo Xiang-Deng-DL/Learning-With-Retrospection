@@ -15,7 +15,7 @@ from models import model_dict
 
 from dataset.cifar100 import get_cifar100_dataloaders
 
-from helper.util import adjust_learning_rate, accuracy, AverageMeter, refinelogits, get_traintarget
+from helper.util import adjust_learning_rate, accuracy, AverageMeter, get_traintarget
 from helper.loops import train_vanilla as train1, train_lwr as train2, validate
 
 from zoo import Softmax_T, KL_ays, KL
@@ -166,7 +166,7 @@ def main():
         train_logits = train_logits.detach().cpu()
             
         if epoch>=opt.eta and epoch%opt.eta==0:
-            print('label refinery')
+            print('label update')
             train_loader, val_loader = get_cifar100_dataloaders(batch_size=opt.batch_size, num_workers=opt.num_workers, is_instance=False, is_shuffle=True, is_soft=True, train_softlabels=train_logits)
         
         time2 = time.time()
