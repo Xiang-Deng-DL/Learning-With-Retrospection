@@ -1,4 +1,4 @@
-# Pytorch Implementation for 'Learning with Retrospection' AAAI'2021
+# LWR: Learning with Retrospection AAAI'2021
 
 # Requirements:
 pytorch==1.2.0  torchvision==0.4.0
