@@ -1,4 +1,5 @@
 # Learning with Retrospection AAAI'2021
+The official PyTorch implementation of Learning with Retrospection.
 
 # Requirements:
 pytorch==1.2.0  torchvision==0.4.0
